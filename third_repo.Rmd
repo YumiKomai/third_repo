@@ -21,15 +21,10 @@ You will submit a GitHub repo that:
 
 
 ```{r cars}
-summary(cars)
-```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+> library(readxl)
+> Data_Education_and_Internet_Access <- read_excel("~/Desktop/Hertie School of Governance/Data Analysis/Data Education and Internet Access.xlsx")
+> View(Data_Education_and_Internet_Access)
+> View(Data_Education_and_Internet_Access)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -22,8 +22,8 @@ You will submit a GitHub repo that:
 
 ```{r cars}
 library(readxl)
-Data_Education_and_Internet_Access <- read_excel("~/Desktop/third_repo/Data Education and Internet Access.xlsx")
-View(Data_Education_and_Internet_Access)
+Education_and_Internet <- read_excel("~/Desktop/Education and Internet.xlsx")
+View(Education_and_Internet)
 ```
 
 

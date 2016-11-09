@@ -35,10 +35,26 @@ You will submit a GitHub repo that:
 
 
 
-
-```{r echo=FALSE}
-
+```{r echo=false}
+ library(xlsx)
+Data_Education_and_Internet_Access <- read.xlsx("/Users/komaiyumi/Desktop/Social Sicence/third_repo/Data Education and Internet Access.xlsx",1)
 ```
 
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r echo=false}
+
+##Use WDI data
+library("WDI", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
+
+indicators <- c("NY.GDP.PCAP.KD","IT.NET.USER.P3")
+Data_GDPperCapita_and_Internet_Acess <- WDI(indicator=indicators, country = 'all', start = 2011, end = 2011, extra=FALSE)v
+
+
+##clean data
+Data_GDPperCAPITA_and_Internet_Acess <- dplyr::select(Data_GDPperCapita_and_Internet_Acess,country,NY.GDP.PCAP.KD, IT.NET.USER.P2)
+
+##Give new variable
+names(Data_GDPperCAPITA_and_Internet_Acess) <- c('Country', 'GDP per capita(constant 2000 US$)', 'Internet Uers(per 100 people)')
+
+```
+

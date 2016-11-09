@@ -5,10 +5,8 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
+knitr::opts_chunk$set(echo = FALSE)
 ```
-
 
 ## Introduction
 The main goal of this third assignment is to gather web based data from at least two sources, merge the data sets, conduct basic descriptive and some inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. 
@@ -18,13 +16,11 @@ We have gathered to different datasets from two different data sources. The firs
 In order to produce a tangible statistical analysis we have cleaned and merged the relevant data of both datasets. Then, we have generate tables and figures to relate the data with the aim of adressing, as well as possible, our researching question to begin to determine whether our hypothesis is correct or not.
 
 ## Detailed process
-
 The data introduced in the Markdown document was, on the one hand, imported from an excel document, the data of which had been previously cleaned and merged from the original QOG document.
 The second dataset has been gathered from the World Bank data and introduced from the WDI package, which is already included in 'R'.
 
 
 ## Tables and Figures 
-
 Purpose: Gather, clean, and (begin to) analyse data
 Deadline: 11 November
 You will submit a GitHub repo that:
@@ -34,13 +30,33 @@ You will submit a GitHub repo that:
 - Has a write up of 1,500 words maximum that describes the data gathering and analysis, It also will use literate programming
 
 
-
 ```{r echo=false}
  library(xlsx)
-Data_Education_and_Internet_Access <- read.xlsx("/Users/komaiyumi/Desktop/Social Sicence/third_repo/Data Education and Internet Access.xlsx",1)
+Data_Education_and_Internet_Access <- read.xlsx("/Users/komaiyumi/Desktop/Social Sicence/third_repo/Education and Internet.xlsx",1)
 ```
 
+## Education and Internet Accessibility
+```{r echo=false}
 
+### creating plots
+names(Data_Education_and_Internet_Access) <- c('Country', 'Quality_of_Education_System', 'Average_Schooling_Year','Internet_Uers')
+
+plot(Data_Education_and_Internet_Access$'Quality_of_Education_System', Data_Education_and_Internet_Access$'Internet_Uers', xlab='Quality of education',ylab='Internet Accessibility')
+
+plot(Data_Education_and_Internet_Access$'Average_Schooling_Year', Data_Education_and_Internet_Access$'Internet_Uers', xlab='Average Schooling Year',ylab='Internet Accessibility')
+
+
+### conducting hypothesis tests
+Q <- Data_Education_and_Internet_Access$'Quality_of_Education_System'
+I <- Data_Education_and_Internet_Access$'Internet_Uers'
+Y <- Data_Education_and_Internet_Access$'Average_Schooling_Year'
+cor.test(Q,I,method="pearson")
+cor.test(Y,I,method="pearson")
+```
+
+## GDP and Internet Accessibility
+
+### Cleaning WDI data
 ```{r echo=false}
 
 ##Use WDI data
@@ -52,9 +68,20 @@ Data_GDPperCapita_and_Internet_Acess <- WDI(indicator=indicators, country = 'all
 
 ##clean data
 Data_GDPperCAPITA_and_Internet_Acess <- dplyr::select(Data_GDPperCapita_and_Internet_Acess,country,NY.GDP.PCAP.KD, IT.NET.USER.P2)
-
+　
 ##Give new variable
-names(Data_GDPperCAPITA_and_Internet_Acess) <- c('Country', 'GDP per capita(constant 2000 US$)', 'Internet Uers(per 100 people)')
+names(Data_GDPperCAPITA_and_Internet_Acess) <- c('Country', 'GDPpeCapita', 'InternetUers')
 
 ```
 
+### Conducting basic descriptive statistics
+```{r echo=false}
+
+### creating plot
+plot(log(Data_GDPperCAPITA_and_Internet_Acess$'GDPperCapita'), Data_GDPperCAPITA_and_Internet_Acess$'InternetUers',xlab='Internet Users',ylab='GDP per Capita')
+
+### conducting hypothesis tests
+G <- Data_GDPperCAPITA_and_Internet_Acess$'GDPperCapita'
+I2 <- Data_GDPperCAPITA_and_Internet_Acess$'InternetUers'
+cor.test(G,I2,method="pearson")
+```

@@ -15,10 +15,15 @@ The main goal of this third assignment is to gather web based data from at least
 
 We have gathered to different datasets from two different data sources. The first dataset is from the CIA World Fact book, and the second from the The Quality of Government Institute (QOG), which is part of the University of Gothenburg. Both datasets are open and can be found in their respective webpages.
 
-In order to produce a tangible statistical analysis we have cleaned and merged the relevant data of both datasets. Then, we have related the data with the aim of adressing, as well as possible, our researching question to begin to determine whether our hypothesis is correct or not.
+In order to produce a tangible statistical analysis we have cleaned and merged the relevant data of both datasets. Then, we have generate tables and figures to relate the data with the aim of adressing, as well as possible, our researching question to begin to determine whether our hypothesis is correct or not.
 
 ## Detailed process
 
+The data introduced in the Markdown document was, on the one hand, imported from an excel document, the data of which had been previously cleaned and merged from the original QOG document.
+The second dataset has been gathered from the World Bank data and introduced from the WDI package, which is already included in 'R'.
+
+
+## Tables and Figures 
 
 Purpose: Gather, clean, and (begin to) analyse data
 Deadline: 11 November

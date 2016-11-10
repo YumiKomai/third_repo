@@ -33,10 +33,11 @@ Each correlation has been displayed with an axis with two vectors, each one repr
 
 ###Data Source
 - QOGData: http://qog.pol.gu.se/data/datadownloads/qogstandarddata
+
 We downloaded The QoG Basic Cross-Section Data (version January 2016), and picked the following three datas up to create the new data set:
--- internetuse Internet users (per 100 people)
--- Average Schooling Years, Female and Male (25+)
--- Quality of the educational system
+ -- internetuse Internet users (per 100 people)
+ -- Average Schooling Years, Female and Male (25+)
+ -- Quality of the educational system
 
 ```{r echo=FALSE}
 library(xlsx)
@@ -76,9 +77,9 @@ The both result shows P-value = 0, so we can reject the null hypothesis that the
 ### Data Sorces
 - The World Bank
 We picked the R package(WDI) and use the following two datas.
--- Internet users (per 100 people, 2011) :
+ -- Internet users (per 100 people, 2011) :
 http://data.worldbank.org/indicator/IT.NET.USER.P2
--- GDP per capita (constant 2000 US$, 2011)
+ -- GDP per capita (constant 2000 US$, 2011)
 
 ###Conducting basic descriptive statistics
 ```{r echo=FALSE}

@@ -11,27 +11,22 @@ knitr::opts_chunk$set(echo = FALSE)
 # Introduction
 The main goal of this third assignment is to gather web based data from at least two sources, merge the data sets, conduct basic descriptive and some inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. 
 
+# Data gathering and merging process
 We have gathered to different datasets from two different data sources. The first dataset is from the CIA World Fact book, and the second from the The Quality of Government Institute (QOG), which is part of the University of Gothenburg. Both datasets are open and can be found in their respective webpages.
 
-In order to produce a tangible statistical analysis we have cleaned and merged the relevant data of both datasets. Then, we have generate tables and figures to relate the data with the aim of adressing, as well as possible, our researching question to begin to determine whether our hypothesis is correct or not.
-
-# Detailed process
-The data introduced in the Markdown document was, on the one hand, imported from an excel document, the data of which had been previously cleaned and merged from the original QOG document.
-The second dataset has been gathered from the World Bank data and introduced from the WDI package, which is already included in 'R'.
+In order to produce a tangible statistical analysis we have cleaned and merged the relevant data of both datasets. Then, we have generate tables and figures to relate the data with the aim of addressing, as well as possible, our researching question to begin to determine whether our hypothesis is correct or not.
 
 
 # Tables and Figures 
-Purpose: Gather, clean, and (begin to) analyse data
-Deadline: 11 November
-You will submit a GitHub repo that:
-- Gathers web-based data from at least two sources. Cleans and merges the data so that it is ready for statistical analyses.
-- Conducts basic descriptive statistics with the data to address a relevant research question. Could include inferential stats.
-- Briefly describes the results including with dynamically generated tables and figures.
-- Has a write up of 1,500 words maximum that describes the data gathering and analysis, It also will use literate programming
+In this section, we have created three different plots in order to expose in a visual way the data that we have selected to answer our research question. Two of these plots are related to education and Internet accessibility. In the first one there is a comparison between the quality of the education and internet access and the second one between average schooling year and Internet users. The third one focuses its attention on the GDP and makes and compares GDP per capita and Internet users.
+
+In order to display, as best as possible, our data we have chosen different figures to make understandable the correlation between two different data. 
+The first option chosen has been an axis with two vectors, each one representing a different variable (Internet Users, GDP per capita, Average of Schooling Years or Quality of Education). In this axis, the tendency in the correlation between the two different variables it is represented by points, each one representing a different country. Altogether, it gives a clear picture of whether there is a tendency or not that confirms the hypothesis of our researching question.  
 
 
 ```{r echo=false}
-
+ library(xlsx)
+Data_Education_and_Internet_Access <- read.xlsx("/Users/komaiyumi/Desktop/Social Sicence/third_repo/Education and Internet.xlsx",1)
 ```
 
 # Education and Internet Accessibility

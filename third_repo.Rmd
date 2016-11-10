@@ -2,6 +2,7 @@
 title: "Third Assignment"
 output:
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -24,14 +25,14 @@ In order to display, as best as possible, our data we have chosen different figu
 The first option chosen has been an axis with two vectors, each one representing a different variable (Internet Users, GDP per capita, Average of Schooling Years or Quality of Education). In this axis, the tendency in the correlation between the two different variables it is represented by points, each one representing a different country. Altogether, it gives a clear picture of whether there is a tendency or not that confirms the hypothesis of our researching question.  
 
 
-```{r echo=false}
- library(xlsx)
+```{r echo=FALSE}
+library(xlsx)
 Data_Education_and_Internet_Access <- read.xlsx("/Users/komaiyumi/Desktop/Social Sicence/third_repo/Education and Internet.xlsx",1)
 ```
 
 # Education and Internet Accessibility
 ## Cleaning QOG data
-```{r echo=false}
+```{r echo=FALSE}
 
 ## creating plots
 names(Data_Education_and_Internet_Access) <- c('Country', 'Quality_of_Education_System', 'Average_Schooling_Year','Internet_Uers')
@@ -42,7 +43,7 @@ plot(Data_Education_and_Internet_Access$'Average_Schooling_Year', Data_Education
 ```
 
 ## Conducting hypothesis tests
-```{r echo=false}
+```{r echo=FALSE}
 Q <- Data_Education_and_Internet_Access$'Quality_of_Education_System'
 I <- Data_Education_and_Internet_Access$'Internet_Uers'
 Y <- Data_Education_and_Internet_Access$'Average_Schooling_Year'
@@ -53,31 +54,30 @@ cor.test(Y,I,method="pearson")
 # GDP and Internet Accessibility
 
 ## Cleaning WDI data
-```{r echo=false}
-
+```{r echo=FALSE}
 ##Use WDI data
+
 library("WDI", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
 
-indicators <- c("NY.GDP.PCAP.KD","IT.NET.USER.P3")
-Data_GDPperCapita_and_Internet_Acess <- WDI(indicator=indicators, country = 'all', start = 2011, end = 2011, extra=FALSE)v
-
+indicators <- c("NY.GDP.PCAP.KD","IT.NET.USER.P2")
+Data_GDPperCapita_and_Internet_Acess <- WDI(indicator=indicators, country = 'all', start = 2011, end = 2011, extra=FALSE)
 
 ##clean data
 Data_GDPperCAPITA_and_Internet_Acess <- dplyr::select(Data_GDPperCapita_and_Internet_Acess,country,NY.GDP.PCAP.KD, IT.NET.USER.P2)
 　
 ##Give new variable
-names(Data_GDPperCAPITA_and_Internet_Acess) <- c('Country', 'GDPpeCapita', 'InternetUers')
+names(Data_GDPperCAPITA_and_Internet_Acess) <- c('Country', 'GDPperCapita', 'InternetUers')
 
 ```
 
 ## Conducting basic descriptive statistics
-```{r echo=false}
+```{r echo=FALSE}
 ### creating plot
 plot(log(Data_GDPperCAPITA_and_Internet_Acess$'GDPperCapita'), Data_GDPperCAPITA_and_Internet_Acess$'InternetUers',xlab='Internet Users',ylab='GDP per Capita')
 ```
 
 ## conducting hypothesis tests
-```{r echo=false}
+```{r echo=FALSE}
 G <- Data_GDPperCAPITA_and_Internet_Acess$'GDPperCapita'
 I2 <- Data_GDPperCAPITA_and_Internet_Acess$'InternetUers'
 cor.test(G,I2,method="pearson")

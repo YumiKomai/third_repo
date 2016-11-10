@@ -31,8 +31,7 @@ You will submit a GitHub repo that:
 
 
 ```{r echo=false}
- library(xlsx)
-Data_Education_and_Internet_Access <- read.xlsx("/Users/komaiyumi/Desktop/Social Sicence/third_repo/Education and Internet.xlsx",1)
+
 ```
 
 # Education and Internet Accessibility

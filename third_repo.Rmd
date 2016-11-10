@@ -18,7 +18,7 @@ In order to produce a tangible statistical analysis we have cleaned and merged t
 
 
 # Tables and Figures 
-In this section, we have created three different plots in order to expose in a visual way the data that we have selected to answer our research question. Two of these plots are related to education and Internet accessibility. In the first one there is a comparison between the quality of the education and internet access and the second one between average schooling year and Internet users. The third one focuses its attention on the GDP and makes and compares GDP per capita and Internet users.
+In this section, we have created three different plots in order to expose in a visual way the data that we have selected to answer our research question. Two of these plots are related to education and Internet accessibility. In the first one there is a comparison between the quality of the education and Internet access and the second one between average schooling year and Internet users. The third one focuses its attention on the GDP and makes and compares GDP per capita and Internet users.
 
 In order to display, as best as possible, our data we have chosen different figures to make understandable the correlation between two different data. 
 The first option chosen has been an axis with two vectors, each one representing a different variable (Internet Users, GDP per capita, Average of Schooling Years or Quality of Education). In this axis, the tendency in the correlation between the two different variables it is represented by points, each one representing a different country. Altogether, it gives a clear picture of whether there is a tendency or not that confirms the hypothesis of our researching question.  

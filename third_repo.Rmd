@@ -1,11 +1,12 @@
 ---
 title: "Third Assignment"
 output:
-   pdf_document: default
+  word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
 ```
 
 #Introduction
@@ -99,6 +100,7 @@ names(Data_GDPperCAPITA_and_Internet_Acess) <- c('Country', 'GDPperCapita', 'Int
 ```
 
 This plot focuses its attention on the GDP and makes and compares GDP per capita and Internet users of all countries in 2011.
+
 ```{r echo=FALSE}
 ### creating plot
 plot(log(Data_GDPperCAPITA_and_Internet_Acess$'GDPperCapita'), Data_GDPperCAPITA_and_Internet_Acess$'InternetUers',xlab='Internet Users',ylab='GDP per Capita')
@@ -108,11 +110,13 @@ The result shows the strong correlation between internet accesibility and GDP pe
 
 ###Conducting hypothesis tests
 To analyzing whether the correlation is statistically significant or not, conductig hypothesis test.
+
 ```{r echo=FALSE}
 G <- Data_GDPperCAPITA_and_Internet_Acess$'GDPperCapita'
 I2 <- Data_GDPperCAPITA_and_Internet_Acess$'InternetUers'
 cor.test(G,I2,method="pearson")
 ```
+
 The result shows P-value = 0, so we can reject the null hypothesis that the true correlatio is equal to zero, and conclude there is a strong correlation between internet accesibility and GDP per capita (0.81).
 
 # Conclusion

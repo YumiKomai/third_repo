@@ -13,9 +13,9 @@ knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
 The main goal of this third assignment is to gather web based data from at least two sources, merge the data sets, conduct basic descriptive and some inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures. 
 
 #Hypothesis and Methodology
-Our hypothesis is that **there is a direct correlation between Internet accessibility and student's academic ability and economic growth**. 
+Our hypothesis is the follow **there is a direct correlation between Internet accessibility and student's academic ability and economic growth**. 
 
-To prove the hypothesis, we plot these variables of all countries, which have different internet accessibility rate, student's academic ability and economic growth. Then analyzed the correlation between these variables.
+To prove this hypothesis we plot these variables of all countries, which have different internet accessibility rate, student's academic ability and economic growth. Then, we have analyzed the correlation between these variables.
 
 #Data gathering and merging process
 We have gathered different datasets from two different data sources. The first dataset is from **the World Bank**, and the second from **the Quality of Government Institute (QOG)**, which is part of the University of Gothenburg. Both datasets are open and can be found in their respective webpages.

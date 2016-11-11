@@ -1,4 +1,4 @@
-# third_repo
+# Third Assignment
 
 ## Introduction
 The main goal of this third assignment is to gather web based data from at least two sources, merge the data sets, conduct basic descriptive and some inferential statistics on the data to address a relevant research question and briefly describe the results including with dynamically generated tables and figures.

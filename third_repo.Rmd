@@ -1,7 +1,7 @@
 ---
 title: "Third Assignment"
 output:
-  html_document: default
+   pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -76,6 +76,7 @@ The both result shows P-value = 0, so we can reject the null hypothesis that the
 
 ### Data Sorces
 - The World Bank
+
 We picked the R package(WDI) and use the following two datas.
  - Internet users (per 100 people, 2011) :
 http://data.worldbank.org/indicator/IT.NET.USER.P2
@@ -115,7 +116,7 @@ cor.test(G,I2,method="pearson")
 The result shows P-value = 0, so we can reject the null hypothesis that the true correlatio is equal to zero, and conclude there is a strong correlation between internet accesibility and GDP per capita (0.81).
 
 # Conclusion
-The results obtained in the three different figures have been similar. We can observe that all the data introduced in every different figure, that is all the points, draw a clear upward curve tendency, and correlatons are statistically significant. Therefore, we can conclude our hypothesis is true.
+The results obtained in the three different figures have been similar. **We can observe that all the data introduced in every different figure, that is all the points, draw a clear upward curve tendency, and correlatons are statistically significant**. Therefore, we can conclude our hypothesis is true.
 
 However, the drowned upward curve is not exactly the same in all three cases. The upward curve between Internet Accessibility and Quality of Education is far more dispersed than GDP per capita and Internet users. The latter is much more uniform with just a few points clearly away from the main tendency of the curve.
 Likewise, in the second figure it can be appreciated that the uniformity of the upward curve it is between the first and the third figure.

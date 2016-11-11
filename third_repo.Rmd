@@ -57,7 +57,7 @@ plot(Data_Education_and_Internet_Access$'Quality_of_Education_System', Data_Educ
 plot(Data_Education_and_Internet_Access$'Average_Schooling_Year', Data_Education_and_Internet_Access$'Internet_Uers', xlab='Average Schooling Year',ylab='Internet Accessibility')
 ```
 
-These plots show the strong correlation between internet accesibility and average schoolong year and quality of education system.
+These plots show the strong correlation between internet accessibility and average schoolong year and quality of education system.
 
 ### Conducting hypothesis tests
 To analyzing whether the correlation is statistically significant or not, conductig hypothesis test.
@@ -70,8 +70,8 @@ cor.test(Y,I,method="pearson")
 ```
 The both result shows P-value = 0, so we can reject the null hypothesis that the true correlatio is equal to zero, and conclude there is a strong correlation between internet accesibility and average schoolong year and quality of education system.
 
-- internet accesibility and average schoolong year: 0.72
-- internet accesibility and quality of education system: 0.80
+- internet accessibility and average schoolong year: 0.72
+- internet accessibility and quality of education system: 0.80
 
 ## GDP and Internet Accessibility
 
@@ -106,7 +106,7 @@ This plot focuses its attention on the GDP and makes and compares GDP per capita
 plot(log(Data_GDPperCAPITA_and_Internet_Acess$'GDPperCapita'), Data_GDPperCAPITA_and_Internet_Acess$'InternetUers',xlab='Internet Users',ylab='GDP per Capita')
 ```
 
-The result shows a strong correlation between internet accesibility and GDP per capita.
+The result shows a strong correlation between internet accessibility and GDP per capita.
 
 ###Conducting hypothesis tests
 To analyzing whether the correlation is statistically significant or not, conductig hypothesis test.

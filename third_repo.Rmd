@@ -15,7 +15,7 @@ The main goal of this third assignment is to gather web based data from at least
 #Hypothesis and Methodology
 Our hypothesis is the follow **there is a direct correlation between Internet accessibility and student's academic ability and economic growth**. 
 
-To prove this hypothesis we plot these variables of all countries, which have different internet accessibility rate, student's academic ability and economic growth. Then, we have analyzed the correlation between these variables.
+To prove this hypothesis we plot these variables of all countries that we have data, which have different internet accessibility rate, student's academic ability and economic growth. Then, we have analyzed the correlation between these variables.
 
 #Data gathering and merging process
 We have gathered different datasets from two different data sources. The first dataset is from **the World Bank**, and the second from **the Quality of Government Institute (QOG)**, which is part of the University of Gothenburg. Both datasets are open and can be found in their respective webpages.
@@ -106,7 +106,7 @@ This plot focuses its attention on the GDP and makes and compares GDP per capita
 plot(log(Data_GDPperCAPITA_and_Internet_Acess$'GDPperCapita'), Data_GDPperCAPITA_and_Internet_Acess$'InternetUers',xlab='Internet Users',ylab='GDP per Capita')
 ```
 
-The result shows the strong correlation between internet accesibility and GDP per capita.
+The result shows a strong correlation between internet accesibility and GDP per capita.
 
 ###Conducting hypothesis tests
 To analyzing whether the correlation is statistically significant or not, conductig hypothesis test.

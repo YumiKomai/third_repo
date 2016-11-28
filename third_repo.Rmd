@@ -50,11 +50,11 @@ In the first one there is a comparison between the quality of the education and 
 
 ```{r echo=FALSE, fig.align='center'}
 ## cleaning QOG data
-names(Data_Education_and_Internet_Access) <- c('Country', 'Quality_of_Education_System', 'Average_Schooling_Year','Internet_Uers')
+names(Data_Education_and_Internet_Access) <- c('Country', 'Quality_of_Education_System', 'Average_Schooling_Year','Internet_Users')
 
-plot(Data_Education_and_Internet_Access$'Quality_of_Education_System', Data_Education_and_Internet_Access$'Internet_Uers', xlab='Quality of education',ylab='Internet Accessibility')
+plot(Data_Education_and_Internet_Access$'Quality_of_Education_System', Data_Education_and_Internet_Access$'Internet_Users', xlab='Quality of education',ylab='Internet Accessibility')
 
-plot(Data_Education_and_Internet_Access$'Average_Schooling_Year', Data_Education_and_Internet_Access$'Internet_Uers', xlab='Average Schooling Year',ylab='Internet Accessibility')
+plot(Data_Education_and_Internet_Access$'Average_Schooling_Year', Data_Education_and_Internet_Access$'Internet_Users', xlab='Average Schooling Year',ylab='Internet Accessibility')
 ```
 
 These plots show the strong correlation between internet accessibility and average schoolong year and quality of education system.
